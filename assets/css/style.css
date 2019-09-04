@@ -1,0 +1,40 @@
+
+body {
+    background-image: url(../images/wheat/wheat.png);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+h1{
+    font-family: 'Monoton', cursive;
+    font-weight: bold;
+    font-size: 50px;
+    border-block: border-box;
+    border: dotted black 2px;
+    padding: 30px;
+    margin-top: 10px;
+    margin-bottom: 1px;
+    text-align: center;
+    background-color: rgb(173, 87, 37);
+}
+
+.container{
+    border-block: border-box;
+    border: dotted black 1px;
+    display: block;
+    width: auto;
+    height: 400px;
+    text-align: center;
+    
+}
+
+.container #MotownGame{
+    width: 90%;
+    height: 90%;
+    margin: 20px;
+}
+
+p{
+    font-size: 30px;
+    font-family: 'Monoton', cursive;
+    margin: 40px;
+    color: rgb(233, 140, 140);
+}
