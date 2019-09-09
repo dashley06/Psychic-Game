@@ -1,53 +1,55 @@
 
-
 var directionsText = document.getElementById("directions-text");
-var userchoiceText = document.getElementById("userchoice-text"); //each letter of the random computer word
-var computerchoiceText= document.getElementById("cmputerchoice-text"); // user presses key which is stored in this variable
+var userchoiceText = document.getElementById("userchoice-text");
+var computerchoiceText= document.getElementById("cmputerchoice-text");
 var winsText = document.getElementById("wins-text");
 var lossesText = document.getElementById("losses-text");
-var lettersGuessed= document.getElementById("lettersGuessed");
+var lettersGuessed_char= document.getElementById("lettersGuessed");
 var userWins = 0;
 var userLoss= 0;
 var lettersGuessed= []; //hold each letter  
-
-var clearGame = false;
-var computerChoices = ["enter all the letters"]
+var trial = 8; //# of chances
+var computerChoices = ["a","b","c","d","e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var computerLetter = "";
+var userGuess;
 
 //start game
 function setup(){
-//pick letter randomly
-var computerLetter = computerChoices[Math.floor(Math.random() * computerChoices.length)]
 
- //"Press any key to begin" as event.key to start
- document.onkeyup = function(event){ 
-
-    var userGuess = event.key; //store data as var userGuess
-    
+computerLetter = computerChoices[Math.floor(Math.random() * computerChoices.length)]; //pick letter randomly
+trial = 8;
+lettersGuessed = [];
+console.log(computerLetter);
 }
 
-function checkLetter(userGuess){ //run funtion to check answer
-            if (userGuess === computerLetter[i]){
-                
-                userWins++;
-                winsText.textContent = 
+function checkLetter(){ //run funtion to check answer
+            if (userGuess === computerLetter){
+                userWins++; //increase win counter by 1
+                winsText.innerHTML = userWins;//change the HTML to display win
+                setup(); //re-run the game
             }
-
-}
+            else{
+                trial--; //if the guess was wrong, decrease number of chances by 1
+                document.getElementById("trial").innerHTML = trial; //show remaining chances in HTML
+                lettersGuessed.push(userGuess);
+                var temp = "";
+        
+                //loop to hold the letters already guessed and display on screen
+                for(var i=0;i<lettersGuessed.length;i++){
+                    temp = temp + " " + lettersGuessed[i] + ",";
+                    lettersGuessed_char.innerHTML = temp;
+                }
+            }
+                if(trial === 0){ //restarts game if user runs out of chances
+                 userLoss++;
+                lossesText.innerHTML = userLoss; //show in HTML
+                setup(); //re-run the game
+                }
+            }   
+          
+document.onkeyup = function(event){ 
+    userGuess = event.key; //store data as userGuess
+    checkLetter()
     
+        }
     
-    
-    
-    
-    //if userGuess === computerWordLetter, then displayCorrectAnswer on browser
-        //clear userGuess var
-        //run event.key of user pressing button
-        //store new data as userGuess
-//if userGuess !== computerWordLetter, then UserGuesses -1 AND lettersGuessed (userGuess) display on browser
-        //clear userguess var
-        //run event.key of user pressing button
-        //store as userGuess
-
-//if computerWord === displayCorrectAnswer, then userWins + 1 and clear screen and start from beginning prompt
-    //userWins remains constant
-//if userGuesses === 0, clear screen
-    //userWins remains constant*/
