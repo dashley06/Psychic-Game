@@ -5,6 +5,7 @@ body {
 }
 h1{
     font-family: 'Monoton', cursive;
+    background-color: rgb(243, 177, 243);
     font-weight: bold;
     font-size: 30px;
     border-block: border-box;
@@ -17,6 +18,7 @@ h1{
 
 .container{
     border-block: border-box;
+    background-color: rgb(179, 243, 222);
     border: dotted black 1px;
     display: block;
     width: auto;
@@ -29,4 +31,9 @@ p{
     font-family: 'Times New Roman', Times, serif;
     margin: 40px;
     color: black;
+}
+
+#directions-text{
+    font-weight: bold;
+    font-size: 25px;
 }
