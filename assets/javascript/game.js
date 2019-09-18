@@ -1,7 +1,7 @@
 
 var directionsText = document.getElementById("directions-text");
 var userchoiceText = document.getElementById("userchoice-text");
-var computerchoiceText= document.getElementById("cpmputerchoice-text");
+var computerchoiceText= document.getElementById("computerchoice-text");
 var winsText = document.getElementById("wins-text");
 var lossesText = document.getElementById("losses-text");
 var lettersGuessed_char= document.getElementById("lettersGuessed");
@@ -16,16 +16,17 @@ var userGuess;
 
 //start game
 function setup(){
-
 computerLetter = computerChoices[Math.floor(Math.random() * computerChoices.length)]; //pick letter randomly
 trial = 8;
 lettersGuessed = [];
+
 }
 
 function checkLetter(){ //run funtion to check answer
             if (userGuess === computerLetter){
                 userWins++; //increase win counter by 1
                 winsText.innerHTML = userWins;//change the HTML to display win
+                alert("Winner!");
                 setup(); //re-run the game
             }
             else{
@@ -44,6 +45,7 @@ function checkLetter(){ //run funtion to check answer
                  userLoss++;
                 lossesText.innerHTML = userLoss;//update loss counter in HTML
                 show.innerHTML = computerLetter.toUpperCase(); //show in HTML
+                alert("Sorry, you lost this time");
                 setup(); //re-run the game
                 }
                 
