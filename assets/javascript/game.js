@@ -1,7 +1,4 @@
 
-var directionsText = document.getElementById("directions-text");
-var userchoiceText = document.getElementById("userchoice-text");
-var computerchoiceText= document.getElementById("computerchoice-text");
 var winsText = document.getElementById("wins-text");
 var lossesText = document.getElementById("losses-text");
 var lettersGuessed_char= document.getElementById("lettersGuessed");
@@ -37,7 +34,7 @@ function checkLetter(){ //run funtion to check answer
         
                 //loop to hold the letters already guessed and display on screen
                 for(var i=0;i<lettersGuessed.length;i++){
-                    temp = temp + " " + lettersGuessed[i] + ",";
+                    temp = temp + " " + lettersGuessed[i] + ", ";
                     lettersGuessed_char.innerHTML = temp.toUpperCase();
                 }
             }
@@ -51,7 +48,7 @@ function checkLetter(){ //run funtion to check answer
                 
             }   
           
-            console.clear()
+           // console.clear()
 
 document.onkeyup = function(event){ 
     userGuess = event.key; //store data as userGuess

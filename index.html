@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Patua+One&display=swap" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Psychic Game</title>
 </head>
@@ -14,20 +14,35 @@
 
     <div class="row">
         <div class="col-12">
-            <h1> Psychic Game</h1>
+            <h1> Psychic Game <br><br> (Guess the Letter)</h1>
         </div>
     </div>
+
+
     <div class ="row">
-        <div class="container mx-auto col-10">
-            <p id="directions-text">Guess what letter I'm thinking of!</p>
-            <!-- <p id="userchoice-text"></p>
-            <p id="computerchoice-text"></p> -->
-            <p>Guesses Left: <span id="trial"></span></p>
-            <p>Wins: <span id="wins-text"></span></p>
-            <p>Losses: <span  id="losses-text"></span></p>
-            <p>Your guesses so far: <span  id="lettersGuessed"></span></p>
-            <hr>
-            <p>The Correct Answer was...... <span id="show"></span></p>
+        <div class ="col-6 text-center">
+            <div class="card" style="width: 35rem;">
+                <div class="card-body">
+                    <h3 class="card-title">Guess what letter I'm thinking of!</h3>
+                                <p>Your guesses so far: <span  id="lettersGuessed"></span></p>
+                                <p>Guesses Left: <span id="trial"></span></p>
+                                <hr>
+                                <p>The Correct Answer was...... <span id="show"></span></p>
+                </div>
+            </div>
+        </div>
+        <div class ="col-6 text-center">
+            <div class="card" style="width: 35rem;">
+                <div class="card-body">
+                        <h3 class="card-title">Results Card</h3>
+                            <div class="card-text">
+                               
+                                <p>Wins: <span id="wins-text"></span></p>
+                                <p>Losses: <span  id="losses-text"></span></p>
+                               
+                            </div>
+                </div>
+            </div>
         </div>
     </div>
 
